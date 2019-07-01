@@ -1,5 +1,5 @@
-# Thermostat (UI)
-Application for showing chart of thermostat details and also upload thermostat data.
+# Student Score Tracker (UI)
+Application for recording student's score and view their details in form of charts.
 
 ## Pre-requisite
 
@@ -8,7 +8,24 @@ Application for showing chart of thermostat details and also upload thermostat d
 
 ### Installation
 
-- Open other terminal and change directory to `angular-thermostat-chart`.
+- Create a project folder Student_Score_Tracker_UI
+    ```sh
+    $ mkdir Student_Score_Tracker_UI
+    ```
+
+- Go to a project root folder Student_Score_Tracker_UI
+    ```sh
+    $ cd Student_Score_Tracker_UI
+    ```
+
+- Clone the repo from git to the current directory.
+    ```sh
+    $ git clone <URL>
+    ```
+- Sync from remote branch into your local .
+    ```sh
+    $ git pull origin master
+    ```
 
 - Install all the frontend dependency
     ```sh
@@ -16,19 +33,16 @@ Application for showing chart of thermostat details and also upload thermostat d
     ```
     
 ### Deploy
-- Run the thermostat app locally.
+- Run the Student Score Tracking app locally.
 
     >Boot the application
 
     ```sh
-    $ npm run start
+    $ ng serve
     ```
     
 
 ### To use the app
 - Navigate to [http://localhost:4200/](http://localhost:4200/)
-- To upload data click on `File Upload` option and upload a .json file containing records.
-- To see chart select the specific date range and click `select` button.
-- 
-## NOTE
-If there isn't any data in database then no chart will be displayed. To resolve this you need to upload data through `File Upload` option in the navbar. Once data upload process is done charts will be visible depending on specific date range selected.
+- To enter data of a student click on `Enter score` option and update/insert a record.
+- To see student details click on `View score` option.

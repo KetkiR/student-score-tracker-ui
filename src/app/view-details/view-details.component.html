@@ -1,0 +1,20 @@
+<div>
+    <div class="dropdown col-md-2 offset-md-4">
+        <label>Select Student</label>
+        <select class="custom-select" (change)="changeStudent($event)">
+            <option *ngFor="let option of dropdownOptions">{{option}}</option>
+        </select>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <option value="" disabled selected>Select</option>
+        </div>
+    </div>
+    <div id="chart_div" *ngIf="chardDataAvailable" class="col-md-4 offset-md-4">
+        <google-chart #chart [title]="title" [type]="type" [data]="chartData" [columnNames]="columnNames"
+            [width]="width" [height]="height">
+        </google-chart>
+    </div>
+    <br><br>
+</div>
+<div *ngIf="isWarning" class="alert alert-warning alert-dismissible col-md-4 offset-md-4" role="alert">
+    <strong>{{alertMessage}}</strong>
+</div>
